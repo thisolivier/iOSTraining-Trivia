@@ -4,7 +4,9 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,23 +19,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rC4-k8-Cea">
-                                <rect key="frame" x="171" y="617" width="32" height="30"/>
-                                <state key="normal" title="Next"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmQ-jT-S1p">
-                                <rect key="frame" x="162" y="105" width="51" height="30"/>
+                                <rect key="frame" x="162" y="94" width="51" height="30"/>
                                 <state key="normal" title="Answer"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVC-O0-w0l">
-                                <rect key="frame" x="16" y="241" width="343" height="101.5"/>
-                                <string key="text">Usually in a panic, needing to get out the door in a very limited amount of time. Food optional, often fuit eaten on the bus. Always check for wallet, keys, glasses and phone before exiting house.</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do I start my day?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzA-04-Yvm">
+                                <rect key="frame" x="16" y="65" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do I start my day?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzA-04-Yvm">
-                                <rect key="frame" x="100" y="65" width="175" height="20.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abt-Im-sen">
+                                <rect key="frame" x="16" y="617" width="31" height="30"/>
+                                <state key="normal" title="Prev"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rC4-k8-Cea">
+                                <rect key="frame" x="327" y="617" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVC-O0-w0l">
+                                <rect key="frame" x="20" y="263" width="335" height="101.5"/>
+                                <string key="text">Usually in a panic, needing to get out the door in a very limited amount of time. Food optional, often fuit eaten on the bus. Always check for wallet, keys, glasses and phone before exiting house.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -41,15 +47,20 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rC4-k8-Cea" secondAttribute="bottom" constant="20" id="2oq-SL-er3"/>
-                            <constraint firstItem="kmQ-jT-S1p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3FW-vQ-Tto"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eVC-O0-w0l" secondAttribute="trailing" constant="16" id="4K4-NY-Ycf"/>
-                            <constraint firstItem="rC4-k8-Cea" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F8E-Of-HMC"/>
-                            <constraint firstItem="kmQ-jT-S1p" firstAttribute="top" secondItem="wzA-04-Yvm" secondAttribute="bottom" constant="19.5" id="Mco-mc-JoS"/>
-                            <constraint firstItem="wzA-04-Yvm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WLm-SN-kqD"/>
-                            <constraint firstItem="wzA-04-Yvm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="adq-cP-F2q"/>
-                            <constraint firstItem="eVC-O0-w0l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gDE-IL-0vF"/>
-                            <constraint firstItem="eVC-O0-w0l" firstAttribute="top" secondItem="kmQ-jT-S1p" secondAttribute="bottom" constant="106" id="iT1-Bo-h6i"/>
+                            <constraint firstItem="rC4-k8-Cea" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="abt-Im-sen" secondAttribute="trailing" constant="20" id="0H8-UB-5Tk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wzA-04-Yvm" secondAttribute="trailing" constant="16" id="2cH-7T-7Cw"/>
+                            <constraint firstItem="wzA-04-Yvm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="5yg-g8-OIF"/>
+                            <constraint firstItem="kmQ-jT-S1p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7U7-7C-ykB"/>
+                            <constraint firstItem="eVC-O0-w0l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Ed7-Vs-e6u"/>
+                            <constraint firstItem="wzA-04-Yvm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="IQJ-yB-yRS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="abt-Im-sen" secondAttribute="bottom" constant="20" id="LvT-D8-i7t"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rC4-k8-Cea" secondAttribute="bottom" constant="20" id="SoE-De-Qak"/>
+                            <constraint firstAttribute="trailing" secondItem="eVC-O0-w0l" secondAttribute="trailing" constant="20" id="VyU-cn-1OY"/>
+                            <constraint firstItem="eVC-O0-w0l" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-20" id="aDa-Bo-1Pc"/>
+                            <constraint firstItem="rC4-k8-Cea" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="brf-jW-7mh"/>
+                            <constraint firstItem="kmQ-jT-S1p" firstAttribute="top" secondItem="wzA-04-Yvm" secondAttribute="bottom" constant="8" symbolic="YES" id="h4o-8I-Au3"/>
+                            <constraint firstItem="rC4-k8-Cea" firstAttribute="baseline" secondItem="abt-Im-sen" secondAttribute="baseline" id="t9g-2C-RLk"/>
+                            <constraint firstItem="abt-Im-sen" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uVy-gS-I2d"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
